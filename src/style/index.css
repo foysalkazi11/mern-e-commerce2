@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
+@import "./Nav.css";
+
+
+.color-collect-from-html5{
+    color: #ddd;
+		background: #fff;
+    color: #bbb;
+    color: #555 ;
+    background: #4f4f4f;
+    background-color: #43bff0;
+    background-color: #3BA8D3;
+    background-color: #444;
+    background-color: #4f4f4f;
+    background-color: #3f3f3f;
+    color: #666;
+    color: #3e3e3e;
+    background-color: #282828;
+    background: #383838;
+    background: #484848;
+}
+
+:root{
+  --fontColor:#222;
+  --fontColor2:#3e3e3e;
+  --navBackgroun:#2d3436;
+  --navBackgroun2:#282828;
+  --fontWhite:#f2f2f2;
+  --light-gray:#f4f4f4;
+  --light-gray2:#fafafa;
+  --primary-gray:#cdd1d9;
+  --primary-gray2:#bbb;
+  --dark-gray:#4f4f4f;
+  --dark-gray2:#666666;
+  --background-dark:#303030;
+  --monlightBlue:#2c3e50;
+  --buttonBorder:#e67e22;
+  --buttonBorderHover:rgba(230, 126, 34,0.5);
+  --buttonHover:#d35400;
+  --cp1color1:#1c2b2d;
+  --cp1color2:#1f6f8b;
+  --cp1color3:#99a8b2;
+  --cp1color4:#e6d5b8;
+
+  --cp2color1:#1d2d50;
+  --cp2color2:#133b5c;
+  --cp2color3:#1e5f74;
+  --cp2color4:#fcdab7;
+
+  --transition: all .3s ease-in-out;
+  
+}
+
+*,
+::before,
+::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body{
+  color: var(--fontColor2);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6rem;
+	font-weight: 300;
+  
+}
+.wraper{
+  width: 100%;
+  height: auto;
+  
+}
+
+.section{
+  width: 100%;
+  max-width: 960px;
+  min-height: auto;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  
+}

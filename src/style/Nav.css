@@ -1,0 +1,95 @@
+.nav-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 1rem ;
+  background-color: var(--dark-gray);
+  color: #ddd;
+  
+}
+.nav-section .nav-container{
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.nav-section .nav-container .page-links{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  margin: 0 auto;
+}
+@media(max-width:1000px){
+  .nav-section .nav-container .page-links{
+    display: none;
+  }
+  .nav-section .nav-container .menu-icon{
+    display: block !important;
+  }
+  .nav-section .nav-container .brand{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    
+  }
+  .nav-section .nav-container .brand li a h1{
+    font-size: 1.7rem;
+
+  }
+
+}
+.nav-section .nav-container .page-links li a{
+  padding:  10px;
+  cursor: pointer;
+}
+.nav-section .nav-container .menu-icon .menu-icon-container{
+  display: flex;
+  align-items: center;
+}
+
+.nav-section .nav-container .brand a h1{
+  font-weight: 3;
+  font-size: 2rem;
+}
+.nav-section .nav-container .menu-icon{
+  display: none;
+}
+/* .nav-section .nav-container .account{
+  margin-left: auto;
+} */
+
+.nav-section .nav-container .menu-icon,
+.nav-section .nav-container .brand,
+.nav-section .nav-container .account,
+.nav-section .nav-container .shopping-bag{
+  padding: 10px;
+  
+}
+.sub-menu{
+  background-color: var(--dark-gray2);
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition:all .3s linear;
+    transform: translateX(-220px);
+    
+    padding: 2rem 1rem;
+  
+}
+.sub-menu .submenu-links li {
+  padding: 7px;
+}
+.open-submenu{
+  transform: translateX(0);
+}
+.sub-menu .close-icon{
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
