@@ -1,10 +1,11 @@
 import React from "react";
-import { Nav } from "./components/AllComponent";
+import { Nav, Home } from "./components/AllComponent";
 
 const App = () => {
   return (
     <div>
       <Nav />
+      <Home />
     </div>
   );
 };

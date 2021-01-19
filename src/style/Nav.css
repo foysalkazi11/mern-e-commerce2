@@ -22,7 +22,7 @@
   flex: 1;
   margin: 0 auto;
 }
-@media(max-width:1000px){
+@media(max-width:1050px){
   .nav-section .nav-container .page-links{
     display: none;
   }
@@ -37,13 +37,14 @@
   }
   .nav-section .nav-container .brand li a h1{
     font-size: 1.7rem;
-
+    
   }
 
 }
 .nav-section .nav-container .page-links li a{
   padding:  10px;
   cursor: pointer;
+  letter-spacing: 2px;
 }
 .nav-section .nav-container .menu-icon .menu-icon-container{
   display: flex;
@@ -51,8 +52,9 @@
 }
 
 .nav-section .nav-container .brand a h1{
-  font-weight: 3;
+  font-weight: 300;
   font-size: 2rem;
+  letter-spacing: 5px;
 }
 .nav-section .nav-container .menu-icon{
   display: none;
@@ -68,6 +70,9 @@
   padding: 10px;
   
 }
+.nav-section .nav-container .account{
+  letter-spacing: 2px;
+}
 .sub-menu{
   background-color: var(--dark-gray2);
     position: fixed;
@@ -79,11 +84,14 @@
     transition:all .3s linear;
     transform: translateX(-220px);
     
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
   
 }
 .sub-menu .submenu-links li {
   padding: 7px;
+}
+.sub-menu .submenu-links li a{
+  letter-spacing: 2px;
 }
 .open-submenu{
   transform: translateX(0);
