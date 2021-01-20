@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
 @import "./Nav.css";
-@import "./home.css";
+@import "./hero.css";
 @import "./bestSeller.css";
+@import "./shopAll.css";
+@import "./customeDesign.css";
+@import "./otherProduct.css";
+@import "./discoverMore.css";
 
 
 .color-collect-from-html5{
@@ -72,7 +76,7 @@ body{
 .wraper{
   width: 100%;
   height: auto;
-  
+  margin: 0 auto;
 }
 
 .section{
@@ -82,4 +86,7 @@ body{
   margin: 0 auto;
   padding: 3rem 1rem;
   
+}
+h1,h2,h3,h4,h5,h6{
+  letter-spacing: 3px;
 }

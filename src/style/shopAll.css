@@ -1,0 +1,15 @@
+.shopall-wraper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shopall-wraper .hero-img{
+  width: 100%;
+  padding: 1rem 0;
+}
+.shopall-wraper .hero-img img{
+  width: 100%;
+  max-height: 720px;
+  object-fit: cover;
+}

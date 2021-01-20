@@ -1,0 +1,46 @@
+.custom-wraper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+.custom-wraper .intro{
+  font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 3rem ;
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+ 
+}
+@media(max-width:800px){
+  .custom-wraper .intro p{
+    font-size: 1.3rem;
+  }
+}
+
+.custom-wraper .hero-img{
+  width: 100%;
+  padding: 1rem 0;
+}
+.custom-wraper .hero-img img{
+  width: 100%;
+  max-height: 720px;
+  object-fit: cover;
+}
+
+.custom-wraper .dis{
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  padding: 1rem 3rem ;
+  font-family: 'Times New Roman', Times, serif;
+  
+  line-height: 1.8rem;
+}
+.custom-wraper .dis h2{
+  font-weight: 100;
+  letter-spacing: normal;
+ 
+}
