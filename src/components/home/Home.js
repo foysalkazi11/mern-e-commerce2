@@ -6,7 +6,7 @@ import {
   CustomeDisign,
   OtherProduct,
   DiscoverMore
-} from "./AllComponent";
+} from "../AllComponent";
 const Home = () => {
   return (
     <section className="wraper">

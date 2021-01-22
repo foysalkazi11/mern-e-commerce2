@@ -1,0 +1,19 @@
+.account-wraper{
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+.account-wraper .account-container{
+  width: 100%;
+  max-width: 992px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem 1rem;
+  grid-auto-rows: auto;
+}
+@media(max-width:700px){
+  .account-wraper .account-container{
+    grid-template-columns: 1fr;
+  }
+}

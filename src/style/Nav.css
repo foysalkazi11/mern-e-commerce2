@@ -45,6 +45,7 @@
   padding:  10px;
   cursor: pointer;
   letter-spacing: 2px;
+  color: #ddd;
 }
 .nav-section .nav-container .menu-icon .menu-icon-container{
   display: flex;
@@ -55,6 +56,7 @@
   font-weight: 300;
   font-size: 2rem;
   letter-spacing: 5px;
+  color: #ddd;
 }
 .nav-section .nav-container .menu-icon{
   display: none;
@@ -70,8 +72,10 @@
   padding: 10px;
   
 }
-.nav-section .nav-container .account{
+.nav-section .nav-container .account a{
   letter-spacing: 2px;
+  color: #ddd;
+  
 }
 .sub-menu{
   background-color: var(--dark-gray2);
@@ -92,6 +96,7 @@
 }
 .sub-menu .submenu-links li a{
   letter-spacing: 2px;
+  color: #ddd;
 }
 .open-submenu{
   transform: translateX(0);

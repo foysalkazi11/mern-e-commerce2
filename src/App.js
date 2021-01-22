@@ -1,12 +1,18 @@
 import React from "react";
-import { Nav, Home } from "./components/AllComponent";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { ToastContainer } from "./components/config/notification";
+import { Nav, Home, Account } from "./components/AllComponent";
 
 const App = () => {
   return (
-    <div>
+    <Router>
+      <ToastContainer />
       <Nav />
-      <Home />
-    </div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/account" component={Account} />
+      </Switch>
+    </Router>
   );
 };
 

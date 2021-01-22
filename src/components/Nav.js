@@ -1,10 +1,26 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+// import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { AiOutlineShopping } from "react-icons/ai";
+import { useAuth } from "../components/authContext/AuthState";
 
 const Nav = () => {
+  const {
+    user,
+    isAuthenticated,
+    message,
+    isLoading,
+    isError,
+    logoutUser
+  } = useAuth();
+
+  if (!isLoading && !isError && !message) {
+    console.log(user, isAuthenticated, message);
+  }
+
   const [open, setOpen] = useState(false);
   const subMenu = (
     <div className={`sub-menu ${open ? "open-submenu" : null}`}>
@@ -51,7 +67,7 @@ const Nav = () => {
         </ul>
         <ul className="brand">
           <li>
-            <Link to="Home">
+            <Link to="/">
               <h1>Jenni Kayne</h1>
             </Link>
           </li>
@@ -61,7 +77,7 @@ const Nav = () => {
             <Link>New</Link>
           </li>
           <li>
-            <Link>Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link>Furniture</Link>
@@ -81,8 +97,19 @@ const Nav = () => {
         </ul>
         <ul className="account">
           <li>
-            <Link>Account</Link>
+            <Link to="/account">Account</Link>
           </li>
+          {user && <li>Welcome, {user.name}</li>}
+          {user && (
+            <li>
+              <button onClick={() => logoutUser()}>Logout</button>
+            </li>
+          )}
+          {user && user.role === "admin" && (
+            <li>
+              <Link to="/account">Add product</Link>
+            </li>
+          )}
         </ul>
         <ul className="shopping-bag">
           <li>
@@ -95,4 +122,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default withRouter(Nav);

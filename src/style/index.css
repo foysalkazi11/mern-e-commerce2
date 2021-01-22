@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
 @import "./Nav.css";
-@import "./hero.css";
-@import "./bestSeller.css";
-@import "./shopAll.css";
-@import "./customeDesign.css";
-@import "./otherProduct.css";
-@import "./discoverMore.css";
+@import "./home/hero.css";
+@import "./home/bestSeller.css";
+@import "./home/shopAll.css";
+@import "./home/customeDesign.css";
+@import "./home/otherProduct.css";
+@import "./home/discoverMore.css";
+@import "./account/account.css";
+@import "./account/createAccount.css";
+@import "./account/loginAccount.css";
+@import "./loading.css";
 
 
 .color-collect-from-html5{
@@ -34,6 +38,7 @@
   --fontWhite:#f2f2f2;
   --light-gray:#f4f4f4;
   --light-gray2:#fafafa;
+  --light-gray3:#ddd;
   --primary-gray:#cdd1d9;
   --primary-gray2:#bbb;
   --dark-gray:#4f4f4f;
