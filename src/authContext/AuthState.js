@@ -70,7 +70,8 @@ const AuthState = ({ children }) => {
 
       dispatch({ type: CHECK_USER, payload: res.data });
     } catch (error) {
-      dispatch({ type: ERROR_USER, payload: error.response.data.message });
+      dispatch({ type: CLEAR_ERROR });
+      // dispatch({ type: ERROR_USER, payload: error.response.data.message });
     }
   };
 

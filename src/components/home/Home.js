@@ -5,7 +5,8 @@ import {
   ShopAll,
   CustomeDisign,
   OtherProduct,
-  DiscoverMore
+  DiscoverMore,
+  MailList
 } from "../AllComponent";
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <CustomeDisign />
       <OtherProduct />
       <DiscoverMore />
+      <MailList />
     </section>
   );
 };

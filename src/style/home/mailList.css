@@ -1,0 +1,55 @@
+.mail-wraper{
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--light-gray3);
+  text-align: center;
+}
+.mail-wraper .mail-container{
+  width: 100%;
+  padding: 10px ;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: center;
+  justify-content: center;
+  grid-gap: 1rem;
+}
+@media(max-width:1000px){
+  .mail-wraper .mail-container{
+    grid-template-columns: 1fr ;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+.mail-wraper .mail-container div{
+  width: 100%;
+  
+}
+.mail-wraper .mail-container div form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mail-wraper .mail-container div form input{
+  width: 300px;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid var(--dark-gray);
+  outline-style: none;
+  border-right: none;
+  border: none ;
+}
+.mail-wraper .mail-container div form button {
+  padding: 4.5px 10px;
+  outline-style: none;
+  border: 1px solid var(--dark-gray);
+  border-left: none;
+  background-color: var(--fontWhite);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  border: none ;
+  
+}
+.mail-wraper .mail-container div form input {
+  font-family: 'Open Sans', sans-serif;
+  
+}
