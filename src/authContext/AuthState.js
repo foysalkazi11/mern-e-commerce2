@@ -29,7 +29,6 @@ const AuthState = ({ children }) => {
       const res = await axiosConfig.post(url, inputs);
       dispatch({ type: CHECK_USER, payload: res.data });
     } catch (error) {
-      console.log(error.response.data.message);
       dispatch({ type: ERROR_USER, payload: error.response.data.message });
     }
   };
@@ -42,8 +41,7 @@ const AuthState = ({ children }) => {
       const res = await axiosConfig.post(url, formData);
       dispatch({ type: CHECK_USER, payload: res.data });
     } catch (error) {
-      console.log(error.response.data);
-      dispatch({ type: ERROR_USER, payload: error.response.data });
+      dispatch({ type: ERROR_USER, payload: error.response.data.message });
     }
   };
 
@@ -55,7 +53,7 @@ const AuthState = ({ children }) => {
       const res = await axiosConfig(url);
       dispatch({ type: CHECK_USER, payload: res.data });
     } catch (error) {
-      dispatch({ type: ERROR_USER, payload: error.response.data });
+      dispatch({ type: ERROR_USER, payload: error.response.data.message });
     }
   };
 
@@ -69,10 +67,10 @@ const AuthState = ({ children }) => {
     const url = "/user/authenticated";
     try {
       const res = await axiosConfig(url);
-      console.log(res.data);
+
       dispatch({ type: CHECK_USER, payload: res.data });
     } catch (error) {
-      dispatch({ type: CLEAR_ERROR });
+      dispatch({ type: ERROR_USER, payload: error.response.data.message });
     }
   };
 
@@ -80,12 +78,7 @@ const AuthState = ({ children }) => {
   return (
     <AuthContext.Provider
       value={{
-        user: state.user,
-        isAuthenticated: state.isAuthenticated,
-        message: state.message,
-        isLoading: state.isLoading,
-        isError: state.isError,
-        errorMessage: state.errorMessage,
+        ...state,
         registerUser,
         loginUser,
         logoutUser,

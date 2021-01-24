@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { notification } from "../config/notification";
-import { useAuth } from "../authContext/AuthState";
-import { Loading } from "../config/loading";
+import { notification } from "../../config/notification";
+import { useAuth } from "../../authContext/AuthState";
+import { Loading } from "../../config/loading";
 
 const LoginAccount = (props) => {
   const {
@@ -14,7 +14,6 @@ const LoginAccount = (props) => {
     errorMessage,
     isLoading
   } = useAuth();
-  console.log(isAuthenticated, isError, isLoading);
 
   const [inputVlaue, setinputVlaue] = useState({
     email: "",
@@ -22,8 +21,7 @@ const LoginAccount = (props) => {
   });
 
   useEffect(() => {
-    if (isAuthenticated && !isLoading) {
-      // setloading(false);
+    if (isAuthenticated && !isLoading && !isError) {
       setinputVlaue({
         email: "",
         password: ""
@@ -34,7 +32,7 @@ const LoginAccount = (props) => {
         props.history.push("/");
       }
     }
-    if (isError) {
+    if (isError && errorMessage) {
       notification("error", errorMessage);
       clearError();
     }

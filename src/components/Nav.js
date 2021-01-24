@@ -1,26 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 // import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { AiOutlineShopping } from "react-icons/ai";
-import { useAuth } from "../components/authContext/AuthState";
+import { useAuth } from "../authContext/AuthState";
+import { AiOutlineUser } from "react-icons/ai";
+import { notification } from "../config/notification";
 
 const Nav = () => {
   const {
     user,
-    isAuthenticated,
+    logoutUser,
     message,
+    isAuthenticated,
     isLoading,
-    isError,
-    logoutUser
+    isError
   } = useAuth();
 
-  if (!isLoading && !isError && !message) {
-    console.log(user, isAuthenticated, message);
-  }
-
+  useEffect(() => {
+    if (!isLoading && !isError && message) {
+      notification("info", message);
+    }
+    //eslint-disable-next-line
+  }, [message]);
   const [open, setOpen] = useState(false);
   const subMenu = (
     <div className={`sub-menu ${open ? "open-submenu" : null}`}>
@@ -32,7 +36,7 @@ const Nav = () => {
 
       <ul className="submenu-links">
         <li>
-          <Link>New</Link>
+          <Link to="/newProduct">New</Link>
         </li>
         <li>
           <Link>Home</Link>
@@ -74,7 +78,7 @@ const Nav = () => {
         </ul>
         <ul className="page-links">
           <li>
-            <Link>New</Link>
+            <Link to="/newProduct">New</Link>
           </li>
           <li>
             <Link to="/">Home</Link>
@@ -96,18 +100,30 @@ const Nav = () => {
           </li>
         </ul>
         <ul className="account">
-          <li>
-            <Link to="/account">Account</Link>
-          </li>
-          {user && <li>Welcome, {user.name}</li>}
-          {user && (
+          {!user && (
             <li>
-              <button onClick={() => logoutUser()}>Logout</button>
+              <Link to="/account">Account</Link>
             </li>
           )}
-          {user && user.role === "admin" && (
-            <li>
-              <Link to="/account">Add product</Link>
+          {user && (
+            <li className="user-icon">
+              <AiOutlineUser size="1.5rem" />
+              <div class="sub-menu-1">
+                <ul>
+                  <li>{user.name}</li>
+                  <li>{user.email}</li>
+                  <li>{user.role}</li>
+                  <br className="break" />
+                  <li>
+                    <button onClick={() => logoutUser()}>Logout</button>
+                  </li>
+                  {user.role === "admin" && (
+                    <li>
+                      <Link to="/addProduct">Add product</Link>
+                    </li>
+                  )}
+                </ul>
+              </div>
             </li>
           )}
         </ul>

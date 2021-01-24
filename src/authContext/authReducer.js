@@ -8,7 +8,8 @@ const authReducer = (state, action) => {
       isAuthenticated: action.payload.isAuthenticated,
       message: action.payload.message,
       isLoading: false,
-      isError: false
+      isError: false,
+      errorMessage: ""
     };
   }
   if (action.type === ERROR_USER) {
@@ -16,15 +17,15 @@ const authReducer = (state, action) => {
       ...state,
       isLoading: false,
       isError: true,
-      errorMessage: action.payload.message
+      errorMessage: action.payload,
+      message: ""
     };
   }
   if (action.type === CLEAR_ERROR) {
     return {
       ...state,
       isLoading: false,
-      isError: false,
-      errorMessage: ""
+      isError: false
     };
   }
   if (action.type === RESET_LOADING) {

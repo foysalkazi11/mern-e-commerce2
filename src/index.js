@@ -2,13 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./style/index.css";
 import App from "./App";
-import { AuthState } from "./components/authContext/AuthState";
+import { AuthState } from "./authContext/AuthState";
+import { ProductState } from "./productContext/ProductState";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AuthState>
-      <App />
-    </AuthState>
+    <ProductState>
+      <AuthState>
+        <App />
+      </AuthState>
+    </ProductState>
   </React.StrictMode>,
   document.getElementById("root")
 );

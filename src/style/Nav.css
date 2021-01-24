@@ -72,8 +72,41 @@
   padding: 10px;
   
 }
+.nav-section .nav-container .account .user-icon .sub-menu-1{
+  position: absolute;
+  z-index: 1;
+  top: 35px;
+  right: 0;
+  background-color: var(--dark-gray);
+  display: none;
+  padding: 1rem ;
+  transition: var(--transition);
+}
+
+
+.nav-section .nav-container .account .user-icon:hover .sub-menu-1{
+  display: block;
+ 
+}
+.nav-section .nav-container .account button{
+  background-color: transparent;
+  outline-style: none;
+  outline: none;
+  border: none;
+  color: var(--light-gray3);
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  
+}
+.nav-section .nav-container .account .break{
+  width: 100%;
+  border-bottom: 1px solid var(--light-gray3);
+  
+  
+}
 .nav-section .nav-container .account a{
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   color: #ddd;
   
 }

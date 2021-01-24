@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { notification } from "../config/notification";
+import { notification } from "../../config/notification";
 import { withRouter } from "react-router-dom";
-import { Loading } from "../config/loading";
-import { useAuth } from "../authContext/AuthState";
+import { Loading } from "../../config/loading";
+import { useAuth } from "../../authContext/AuthState";
 
 // form validation ................
 const patterns = {
@@ -13,17 +13,8 @@ const patterns = {
 };
 
 const CreateAccount = (props) => {
-  const {
-    registerUser,
-    clearError,
-    isAuthenticated,
-    isError,
-    errorMessage,
-    isLoading
-  } = useAuth();
-  if (!isLoading) {
-    console.log(isError, errorMessage);
-  }
+  const { registerUser, isAuthenticated, isError, isLoading } = useAuth();
+
   const [inputVlaue, setinputVlaue] = useState({
     name: "",
     email: "",
@@ -56,10 +47,6 @@ const CreateAccount = (props) => {
     } else {
     }
 
-    if (isError) {
-      notification("error", "email is alredy exist please use another email");
-      clearError();
-    }
     //eslint-disable-next-line
   }, [isAuthenticated, isError]);
 

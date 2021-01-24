@@ -9,6 +9,8 @@ import DiscoverMore from "./home/DiscoverMore";
 import Account from "./account/Account";
 import CreateAccount from "./account/CreateAccount";
 import LoginAccount from "./account/LoginAccount";
+import AddProduct from "./AddProduct";
+import NewProduct from "./NewProduct";
 
 export {
   Nav,
@@ -21,5 +23,7 @@ export {
   DiscoverMore,
   Account,
   CreateAccount,
-  LoginAccount
+  LoginAccount,
+  AddProduct,
+  NewProduct
 };
