@@ -11,7 +11,7 @@ const productReducer = (state, action) => {
   if (action.type === ALL_PRODUCT) {
     return {
       ...state,
-      allProduct: action.payload,
+      allProduct: action.payload.allProduct,
       isLoading: false,
       isError: false,
       errorMessage: ""

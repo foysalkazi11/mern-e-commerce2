@@ -8,6 +8,11 @@
   width: 100%;
   padding: 1rem 0;
 }
+/* overwrit css at newProduct  */
+.newProduct-wraper .hero-img{
+  width: 100%;
+  padding: 0;
+}
 .shopall-wraper .hero-img img{
   width: 100%;
   max-height: 720px;
