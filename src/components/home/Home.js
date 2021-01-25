@@ -6,8 +6,7 @@ import {
   CustomeDisign,
   OtherProduct,
   DiscoverMore,
-  MailList,
-  Footer
+  MailList
 } from "../AllComponent";
 const Home = () => {
   return (
@@ -19,7 +18,6 @@ const Home = () => {
       <OtherProduct />
       <DiscoverMore />
       <MailList />
-      <Footer />
     </section>
   );
 };

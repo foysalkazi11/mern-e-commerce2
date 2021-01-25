@@ -6,7 +6,8 @@ import {
   Home,
   Account,
   AddProduct,
-  NewProduct
+  NewProduct,
+  Footer
 } from "./components/AllComponent";
 import AdminRoute from "./proctedRoute/AdminRoute";
 
@@ -21,6 +22,7 @@ const App = () => {
         <Route exact path="/newProduct" component={NewProduct} />
         <AdminRoute exact path="/addProduct" component={AddProduct} />
       </Switch>
+      <Footer />
     </Router>
   );
 };
