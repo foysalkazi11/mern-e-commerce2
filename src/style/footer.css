@@ -1,0 +1,83 @@
+.footer-wraper{
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--dark-gray);
+  color: var(--light-gray3);
+}
+.footer-wraper .footer-container{
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-gap: 1rem;
+}
+@media(max-width:1000px){
+  .footer-wraper .footer-container {
+    grid-template-columns: 1fr;
+  
+  }
+}
+.footer-wraper .footer-container ul .menu{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom:5px;
+}
+.footer-wraper .footer-container ul{
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.footer-wraper .footer-container ul .menu .arrow-icon{
+  color: var(--fontWhite) !important;
+  transition: .5s;
+  transform: rotate(90deg);
+}
+.footer-wraper .footer-container ul p{
+  
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+}
+.footer-wraper .footer-container .contract .email{
+  margin-bottom: 1rem;
+  
+}
+.footer-wraper .footer-container .social{
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.footer-wraper .footer-container .social  button{
+  margin: 0 5px ;
+}
+.footer-wraper .footer-container ul .menu .arrow-icon{
+  display: none;
+  cursor: pointer;
+}
+.footer-wraper .footer-container ul .underline{
+  width: 100%;
+  border-bottom: 1px solid var(--fontColor2);
+  margin-bottom: 1rem;
+  display: none;
+}
+@media(max-width:1000px){
+  .footer-wraper .footer-container ul .footer-sub-menu{
+    display: none ;
+  }
+  .footer-wraper .footer-container ul .menu .arrow-icon{
+    display: block;
+  }
+  .footer-wraper .footer-container ul .underline{
+    display: block;
+  }
+}
+.sub-menu-open{
+  display: block !important;
+}
+.active-icon{
+  transform: rotate(-90deg)!important ;
+}

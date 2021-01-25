@@ -6,6 +6,7 @@ import ShopAll from "./home/ShopAll";
 import CustomeDisign from "./home/CustomeDisign";
 import OtherProduct from "./home/OtherProduct";
 import DiscoverMore from "./home/DiscoverMore";
+import Footer from "./Footer";
 import MailList from "./home/MailList";
 import Account from "./account/Account";
 import CreateAccount from "./account/CreateAccount";
@@ -27,5 +28,6 @@ export {
   LoginAccount,
   AddProduct,
   NewProduct,
-  MailList
+  MailList,
+  Footer
 };

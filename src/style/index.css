@@ -11,6 +11,7 @@
 @import "./account/createAccount.css";
 @import "./account/loginAccount.css";
 @import "./loading.css";
+@import "./footer.css";
 
 
 .color-collect-from-html5{
