@@ -7,7 +7,7 @@
   background-color: var(--dark-gray);
   color: #ddd;
   position: sticky;
-  top: 0;
+  top: 0; 
   
 }
 .nav-section .nav-container{
