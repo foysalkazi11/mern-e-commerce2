@@ -10,14 +10,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import { notification } from "../config/notification";
 
 const Nav = () => {
-  const {
-    user,
-    logoutUser,
-    message,
-    isAuthenticated,
-    isLoading,
-    isError
-  } = useAuth();
+  const { user, logoutUser, message, isLoading, isError } = useAuth();
 
   useEffect(() => {
     if (!isLoading && !isError && message) {
